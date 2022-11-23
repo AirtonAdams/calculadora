@@ -14,9 +14,11 @@ function calc() {
 
   let taxaTurismo = valorVTaxa * valorNDiarias;
 
-  let imposto = (valorDVoucher * 3) / 100
+  let semTaxa = valorDVoucher - taxaTurismo;
+  
+  let imposto = (semTaxa * 3) / 100;
 
-  let diaria = (valorDVoucher - imposto) - taxaTurismo;
+  let diaria = semTaxa - imposto;
 
   let retorno = document.createElement("p")
   let textRetorno = document.createTextNode(`O valor da diária é R$${diaria}`)
