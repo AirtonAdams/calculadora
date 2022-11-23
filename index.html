@@ -12,22 +12,25 @@
       <h1>Calculadora de diária</h1>
     </header>
     <form>
-      <div>
+      <article>
         <label for="dVoucher">Valor total no voucher: R$</label>
-        <input type="number" name="dVoucher" id="dVoucher">
-      </div>
-      <div>
-        <label for="vTaxa">Valor da taxa de turismo: R$</label>
-        <input type="number" name="vTaxa" id="vTaxa">
-      </div>
-      <div>
+        <input type="number" name="dVoucher" id="dVoucher" placeholder="Ex.: 0,00">
+      </article>
+      <article>
+        <div>
+          <label for="vTaxa">Valor da taxa de turismo: R$</label>
+          <input type="number" name="vTaxa" id="vTaxa" placeholder="Ex.: 0,00">
+        </div>
+        <span>Se não houver taxa inclusa zerar o campo</span>
+      </article>
+      <article>
         <label for="nDiarias">Número de diárias: </label>
-        <input type="number" name="nDiarias" id="nDiarias">
-      </div>
-      <div>
+        <input type="number" name="nDiarias" id="nDiarias" placeholder="Ex.: 0">
+      </article>
+      <article>
         <button onclick="clearTheArea()" type="reset">Limpar</button>
         <button onclick="calc()" type="button">Calcular</button>
-      </div>
+      </article>
     </form>
 
     <div id="vTotal"></div>

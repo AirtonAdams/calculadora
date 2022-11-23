@@ -3,6 +3,7 @@ function clearTheArea() {
 }
 
 function calc() {
+  let retorno = document.querySelector("#vTotal").innerHTML = ""
   let dVoucher = document.querySelector("#dVoucher");
   let valorDVoucher = dVoucher.value
 
@@ -18,8 +19,11 @@ function calc() {
   
   let diaria = semTaxa / 1.03;
 
-  let retorno = document.createElement("p")
-  let textRetorno = document.createTextNode(`Valor total das diárias: R$ ${diaria}`)
+  let val = diaria * 100;
+  let rounded = Math.floor(val) / 100
+
+  retorno = document.createElement("p")
+  let textRetorno = document.createTextNode(`Valor total das diárias: R$ ${rounded.toFixed(2)}`)
   retorno.appendChild(textRetorno)
   let vTotal = document.querySelector("#vTotal")
   vTotal.appendChild(retorno)
