@@ -19,7 +19,7 @@ function calc() {
   let diaria = semTaxa / 1.03;
 
   let retorno = document.createElement("p")
-  let textRetorno = document.createTextNode(`Valor total das diárias: R$ ${diaria.toFixed(2)}`)
+  let textRetorno = document.createTextNode(`Valor total das diárias: R$ ${diaria}`)
   retorno.appendChild(textRetorno)
   let vTotal = document.querySelector("#vTotal")
   vTotal.appendChild(retorno)
