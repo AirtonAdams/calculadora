@@ -16,7 +16,7 @@ function calc() {
 
   let semTaxa = valorDVoucher - taxaTurismo;
   
-  let imposto = (semTaxa * 3) / 100;
+  let imposto = semTaxa / 1.03;
 
   let diaria = semTaxa - imposto;
 
