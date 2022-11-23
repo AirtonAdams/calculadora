@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt0br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculadora de diária</title>
+</head>
+<body>
+    <header>
+      <h1>Calculadora de diária</h1>
+    </header>
+    <form>
+      <div>
+        <label for="dVoucher">Valor total no voucher: R$</label>
+        <input type="number" name="dVoucher" id="dVoucher">
+      </div>
+      <div>
+        <label for="vTaxa">Valor da taxa de turismo: R$</label>
+        <input type="number" step="any" name="vTaxa" id="vTaxa">
+      </div>
+      <div>
+        <label for="nDiarias">Número de diárias: </label>
+        <input type="number" name="vDiarias" id="vDiarias">
+      </div>
+      <div>
+        <button onclick="clearTheArea()" type="reset">Limpar</button>
+        <button onclick="calc()" type="button">Calcular</button>
+      </div>
+    </form>
+
+    <div id="vTotal"></div>
+
+    <script src="main.js"></script>
+</body>
+</html>
