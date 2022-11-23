@@ -1,9 +1,3 @@
-let dVoucher = document.querySelector("#dVoucher");
-let valorDVoucher = dVoucher.value
-let vTaxa = document.querySelector("#vTaxa");
-let valorVTaxa = dVoucher.value
-let nDiarias = document.querySelector("#nDiarias");
-let valorNDiarias = dVoucher.value
 function clearTheArea() {
   let retorno = document.querySelector("#vTotal").innerHTML = ""
 }
@@ -11,12 +5,18 @@ function clearTheArea() {
 function calc() {
   let dVoucher = document.querySelector("#dVoucher");
   let valorDVoucher = dVoucher.value
+
   let vTaxa = document.querySelector("#vTaxa");
-  let valorVTaxa = dVoucher.value
+  let valorVTaxa = vTaxa.value
+
   let nDiarias = document.querySelector("#nDiarias");
-  let valorNDiarias = dVoucher.value
+  let valorNDiarias = nDiarias.value
+
   let taxaTurismo = valorVTaxa * valorNDiarias;
-  let diaria = (valorDVoucher / 1.03) - taxaTurismo;
+
+  let imposto = (valorDVoucher * 3) / 100
+
+  let diaria = (valorDVoucher - imposto) - taxaTurismo;
 
   let retorno = document.createElement("p")
   let textRetorno = document.createTextNode(`O valor da diária é R$${diaria}`)
