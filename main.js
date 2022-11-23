@@ -16,12 +16,10 @@ function calc() {
 
   let semTaxa = valorDVoucher - taxaTurismo;
   
-  let imposto = semTaxa / 1.03;
-
-  let diaria = semTaxa - imposto;
+  let diaria = semTaxa / 1.03;
 
   let retorno = document.createElement("p")
-  let textRetorno = document.createTextNode(`O valor da diária é R$${diaria}`)
+  let textRetorno = document.createTextNode(`Valor total das diárias: R$ ${diaria.toFixed(2)}`)
   retorno.appendChild(textRetorno)
   let vTotal = document.querySelector("#vTotal")
   vTotal.appendChild(retorno)
